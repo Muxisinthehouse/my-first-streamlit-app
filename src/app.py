@@ -8,7 +8,7 @@ from urllib.request import urlopen
 import json
 from copy import deepcopy
 import random
-import geopandas as gpd
+
 
 
 
