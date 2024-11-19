@@ -18,7 +18,7 @@ def load_data(path):
     df = pd.read_csv(path)
     return df
 
-mpg_df_raw = load_data(path="../data/mpg.csv")
+mpg_df_raw = load_data(path="./data/mpg.csv")
 mpg_df = deepcopy(mpg_df_raw)
 
 
