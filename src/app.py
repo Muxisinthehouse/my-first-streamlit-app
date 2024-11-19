@@ -26,14 +26,14 @@ mpg_df = deepcopy(mpg_df_raw)
 st.title("Wo chöi mer mit em Hund umeluege?  ")
 st.header("Where to walk the dog? \n Find your dog-peers in Zürich")
 
-hunde = pd.read_csv("../data/20200306_hundehalter.csv")# skiprows=2)
+hunde = pd.read_csv("./data/20200306_hundehalter.csv")# skiprows=2)
 hunde['halter_alter'] = hunde['ALTER'].str[:2].astype(int)+random.randint(0,9)
 hunde['hunde_alter'] = 2024-hunde['GEBURTSJAHR_HUND'].astype(int)
 hunde['anschaffungsalter']=hunde.halter_alter-hunde.hunde_alter
 hunde.head(5)
 hunde = hunde[hunde['hunde_alter'] <= 20]
 
-stadtkreise = json.load(open("../data/stzh.adm_stadtkreise_a.json"))
+stadtkreise = json.load(open("./data/stzh.adm_stadtkreise_a.json"))
 
 
 left_column,right_column = st.columns(2)
